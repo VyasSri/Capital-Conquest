@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dn8mqefg00uj5"
+path="res://.godot/imported/rocket_finsB.obj-eaf3eafd2bed066bf5f7f2c4d3f905d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocket_finsB.obj-eaf3eafd2bed066bf5f7f2c4d3f905d9.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/rocket_finsB.obj"
+dest_files=["res://.godot/imported/rocket_finsB.obj-eaf3eafd2bed066bf5f7f2c4d3f905d9.mesh", "res://.godot/imported/rocket_finsB.obj-eaf3eafd2bed066bf5f7f2c4d3f905d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

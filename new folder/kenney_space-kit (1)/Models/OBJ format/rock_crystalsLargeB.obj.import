@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://x7vbmsu7em78"
+path="res://.godot/imported/rock_crystalsLargeB.obj-ad42f05046fb714b313e5ffcb7ee7803.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rock_crystalsLargeB.obj-ad42f05046fb714b313e5ffcb7ee7803.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/rock_crystalsLargeB.obj"
+dest_files=["res://.godot/imported/rock_crystalsLargeB.obj-ad42f05046fb714b313e5ffcb7ee7803.mesh", "res://.godot/imported/rock_crystalsLargeB.obj-ad42f05046fb714b313e5ffcb7ee7803.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

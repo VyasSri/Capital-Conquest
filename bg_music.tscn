@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://35v132tafon"]
+
+[ext_resource type="AudioStream" uid="uid://b1aqd2w4853uu" path="res://music_zapsplat_astro_race.mp3" id="1_a1bc5"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_a1bc5")
+autoplay = true

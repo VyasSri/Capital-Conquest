@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://eeu2t4hekd6r"]
+
+[ext_resource type="Texture2D" uid="uid://6tkbmxw7u0d5" path="res://Levels/Winn Screen.png" id="1_7dbyo"]
+[ext_resource type="Script" path="res://Levels/Winner 1.gd" id="1_vxo41"]
+[ext_resource type="FontFile" uid="uid://b32xk1e2lpwgg" path="res://Assets/misc/QuartzoBold-W9lv.ttf" id="3_5kvvx"]
+[ext_resource type="FontFile" uid="uid://qd8vto0qbr55" path="res://Assets/misc/misc/HelloGraduationSans-d9enl.ttf" id="4_w3ba2"]
+[ext_resource type="FontFile" uid="uid://bd5f37uayww5d" path="res://Assets/misc/Typographica-Blp5.ttf" id="5_0sfe6"]
+[ext_resource type="Texture2D" uid="uid://dxlx73lcoxvr0" path="res://Assets/UI/Icons/Icon_Small_Blank_Arrow.png" id="6_nky5p"]
+
+[sub_resource type="FontVariation" id="FontVariation_1sv86"]
+base_font = ExtResource("3_5kvvx")
+
+[sub_resource type="FontVariation" id="FontVariation_syjhw"]
+base_font = ExtResource("4_w3ba2")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vxo41")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -232.0
+offset_top = -264.0
+offset_right = 4682.0
+offset_bottom = 3116.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7dbyo")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_top = 120.0
+offset_right = 1928.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(1, 0.85098, 0.4, 1)
+theme_override_fonts/font = SubResource("FontVariation_1sv86")
+theme_override_font_sizes/font_size = 215
+text = "Congratulations!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 832.0
+offset_right = 2267.0
+offset_bottom = 1159.0
+theme_override_fonts/font = SubResource("FontVariation_syjhw")
+theme_override_font_sizes/font_size = 45
+text = "Thank you for saving our business! If only it was the least of our worries... Our sister company on Planet Osoi needs help. Like VP Studios 10 years ago,
+ PV studios is also near bankruptcy.
+
+Fun Fact: Planet Osoi runs 10 years behind than Earth!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 624.0
+offset_top = 920.0
+offset_right = 1630.0
+offset_bottom = 1074.0
+theme_override_fonts/font = ExtResource("5_0sfe6")
+theme_override_font_sizes/font_size = 86
+text = "Return Home"
+flat = true
+
+[node name="Forward_Button" type="Button" parent="."]
+offset_left = 1672.0
+offset_top = 920.0
+offset_right = 1848.0
+offset_bottom = 1082.0
+icon = ExtResource("6_nky5p")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Forward_Button" to="." method="_on_forward_button_pressed"]

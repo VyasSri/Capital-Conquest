@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://4njqa4lyt06h"]
+
+[ext_resource type="Script" path="res://CutScene1.gd" id="1_8rebj"]
+[ext_resource type="Texture2D" uid="uid://cx7jbtleh76jk" path="res://Levels/Cut Scene 1.jpg" id="2_ppo7h"]
+[ext_resource type="FontFile" uid="uid://qd8vto0qbr55" path="res://Assets/misc/misc/HelloGraduationSans-d9enl.ttf" id="3_s3crs"]
+[ext_resource type="Texture2D" uid="uid://cxrfr8j2e0ght" path="res://Assets/UI/Icons/Icon_Small_Blank_Arrow - reversed.png" id="4_61k0l"]
+[ext_resource type="Texture2D" uid="uid://dxlx73lcoxvr0" path="res://Assets/UI/Icons/Icon_Small_Blank_Arrow.png" id="5_4cnmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sexhp"]
+bg_color = Color(0, 0.498039, 0.878431, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_0n7tv"]
+base_font = ExtResource("3_s3crs")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8rebj")
+
+[node name="CutScene1_Img" type="Sprite2D" parent="."]
+position = Vector2(962.5, 328)
+scale = Vector2(3.14543, 2.69608)
+texture = ExtResource("2_ppo7h")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -24.0
+offset_top = 840.0
+offset_right = 1925.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sexhp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 832.0
+offset_right = 3513.0
+offset_bottom = 1060.0
+scale = Vector2(0.982136, 1.03654)
+theme_override_fonts/font = SubResource("FontVariation_0n7tv")
+theme_override_font_sizes/font_size = 55
+text = "Hello Player! You have been summoned to be the next CEO of VP Studios. We are on our last $50,000 and need your help
+ to reach the spot as the number one game development agency by the year 2005. Should you chose to help click the arrow on the right.
+- VP Studios Board"
+
+[node name="Back_Button" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 208.0
+offset_bottom = 178.0
+icon = ExtResource("4_61k0l")
+flat = true
+
+[node name="Forward_Button" type="Button" parent="."]
+offset_left = 1744.0
+offset_top = 16.0
+offset_right = 1920.0
+offset_bottom = 178.0
+icon = ExtResource("5_4cnmg")
+flat = true
+
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Forward_Button" to="." method="_on_forward_button_pressed"]

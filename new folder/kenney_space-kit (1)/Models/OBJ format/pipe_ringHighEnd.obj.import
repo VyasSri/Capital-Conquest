@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjge253xo8hp5"
+path="res://.godot/imported/pipe_ringHighEnd.obj-f89d1fbaf8b77631caa430ae22eeb9cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pipe_ringHighEnd.obj-f89d1fbaf8b77631caa430ae22eeb9cb.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/pipe_ringHighEnd.obj"
+dest_files=["res://.godot/imported/pipe_ringHighEnd.obj-f89d1fbaf8b77631caa430ae22eeb9cb.mesh", "res://.godot/imported/pipe_ringHighEnd.obj-f89d1fbaf8b77631caa430ae22eeb9cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

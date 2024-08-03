@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://liwfva1tqa0b"
+path="res://.godot/imported/meteor_half.obj-5717afa9708160b695029e49357e422b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/meteor_half.obj-5717afa9708160b695029e49357e422b.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/meteor_half.obj"
+dest_files=["res://.godot/imported/meteor_half.obj-5717afa9708160b695029e49357e422b.mesh", "res://.godot/imported/meteor_half.obj-5717afa9708160b695029e49357e422b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

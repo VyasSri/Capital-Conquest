@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://bcunemqpnm3hx"]
+
+[ext_resource type="Script" path="res://Main Menu/mainMenu.gd" id="1_euddk"]
+[ext_resource type="Texture2D" uid="uid://b170hhu0fihfl" path="res://Assets/UI/Icons/main_menu.png" id="2_q0uvt"]
+[ext_resource type="FontFile" uid="uid://b32xk1e2lpwgg" path="res://Assets/misc/QuartzoBold-W9lv.ttf" id="3_21hd4"]
+[ext_resource type="FontFile" uid="uid://bd5f37uayww5d" path="res://Assets/misc/Typographica-Blp5.ttf" id="4_jhybp"]
+[ext_resource type="Theme" uid="uid://dxmju0lrblmn8" path="res://PanelTheme.tres" id="5_vjvtd"]
+[ext_resource type="FontFile" uid="uid://ktgym57cvffm" path="res://Visuals/PlaywriteDEGrund-VariableFont_wght.ttf" id="6_wh67j"]
+
+[sub_resource type="FontVariation" id="FontVariation_juybp"]
+base_font = ExtResource("3_21hd4")
+
+[sub_resource type="FontVariation" id="FontVariation_mjsb8"]
+base_font = ExtResource("4_jhybp")
+
+[sub_resource type="FontVariation" id="FontVariation_oqvqd"]
+base_font = ExtResource("4_jhybp")
+
+[node name="mainMenu" type="Node2D"]
+scale = Vector2(1.663, 1.663)
+script = ExtResource("1_euddk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -687.913
+offset_top = -149.128
+offset_right = 4883.09
+offset_bottom = 2746.87
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_q0uvt")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1155.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(1, 0.85098, 0.4, 1)
+theme_override_fonts/font = SubResource("FontVariation_juybp")
+theme_override_font_sizes/font_size = 125
+text = "Capital
+Conquest"
+horizontal_alignment = 1
+
+[node name="Start_Button" type="Button" parent="."]
+offset_left = 317.499
+offset_top = 307.877
+offset_right = 832.499
+offset_bottom = 394.877
+theme_override_fonts/font = SubResource("FontVariation_mjsb8")
+theme_override_font_sizes/font_size = 78
+text = "Start"
+flat = true
+
+[node name="Instructions_Button" type="Button" parent="."]
+offset_left = 317.499
+offset_top = 408.9
+offset_right = 832.499
+offset_bottom = 523.9
+theme_override_fonts/font = ExtResource("4_jhybp")
+theme_override_font_sizes/font_size = 78
+text = "Instructions"
+flat = true
+
+[node name="Quit_Button" type="Button" parent="."]
+offset_left = 317.499
+offset_top = 514.732
+offset_right = 832.499
+offset_bottom = 601.732
+theme_override_fonts/font = SubResource("FontVariation_oqvqd")
+theme_override_font_sizes/font_size = 78
+text = "Quit"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 664.0
+offset_bottom = 539.0
+theme = ExtResource("5_vjvtd")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 58.0137
+offset_top = 48.7293
+offset_right = 606.014
+offset_bottom = 457.73
+theme_override_fonts/font = ExtResource("6_wh67j")
+theme_override_font_sizes/font_size = 15
+text = "Your task is to make VP Studios into an intergalactic empire by developing 4 types of games: Shooter, Educational, Racing, and Soccer. The first step is to head to the News Media Building, and find out which games are popular. Then, you can develop these games at the Studio and request reviews for them at the News Media Building. Head to the bank to invest in the fluctuating market if you need to make a quick buck. Good Luck. There's much more challenges on foreign planets waiting for you. 
+
+Controls:
+WASD to move
+Mouse Click to Interact
+Right Click to rotate the camera
+
+"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 433.0
+offset_right = 462.0
+offset_bottom = 491.0
+text = "Back"
+
+[connection signal="pressed" from="Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Instructions_Button" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

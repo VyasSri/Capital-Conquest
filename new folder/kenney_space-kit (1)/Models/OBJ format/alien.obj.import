@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr1hnfge4i5hk"
+path="res://.godot/imported/alien.obj-d29bab5f33cd0db9438d8a4ef97a8d7a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/alien.obj-d29bab5f33cd0db9438d8a4ef97a8d7a.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/alien.obj"
+dest_files=["res://.godot/imported/alien.obj-d29bab5f33cd0db9438d8a4ef97a8d7a.mesh", "res://.godot/imported/alien.obj-d29bab5f33cd0db9438d8a4ef97a8d7a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

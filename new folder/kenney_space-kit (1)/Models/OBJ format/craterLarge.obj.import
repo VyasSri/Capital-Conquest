@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://blow6qmvq6hbu"
+path="res://.godot/imported/craterLarge.obj-27cddaa1266b92779448f8b7749d3b0f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/craterLarge.obj-27cddaa1266b92779448f8b7749d3b0f.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/craterLarge.obj"
+dest_files=["res://.godot/imported/craterLarge.obj-27cddaa1266b92779448f8b7749d3b0f.mesh", "res://.godot/imported/craterLarge.obj-27cddaa1266b92779448f8b7749d3b0f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

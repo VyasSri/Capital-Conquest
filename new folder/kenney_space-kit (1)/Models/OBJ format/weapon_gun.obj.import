@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d4epfver05jpf"
+path="res://.godot/imported/weapon_gun.obj-570bf8253068c9dc4fe1a2ea24367d0b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/weapon_gun.obj-570bf8253068c9dc4fe1a2ea24367d0b.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/weapon_gun.obj"
+dest_files=["res://.godot/imported/weapon_gun.obj-570bf8253068c9dc4fe1a2ea24367d0b.mesh", "res://.godot/imported/weapon_gun.obj-570bf8253068c9dc4fe1a2ea24367d0b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,567 @@
+[gd_scene load_steps=15 format=3 uid="uid://dmw6pa4ytiiu2"]
+
+[ext_resource type="Script" path="res://Levels/UI_Manager.gd" id="1_2gknc"]
+[ext_resource type="Script" path="res://Levels/StudioBasePanel.gd" id="2_bjath"]
+[ext_resource type="FontFile" uid="uid://b32xk1e2lpwgg" path="res://Assets/misc/QuartzoBold-W9lv.ttf" id="2_c6ybi"]
+[ext_resource type="Script" path="res://Levels/DevelopPanel.gd" id="3_6grq2"]
+[ext_resource type="Script" path="res://Levels/NavigationControl.gd" id="4_kj7c1"]
+[ext_resource type="Script" path="res://Levels/ReleasePanel.gd" id="5_n1fmq"]
+[ext_resource type="PackedScene" uid="uid://da55dwfg0iilr" path="res://nav_control.tscn" id="6_u27jc"]
+[ext_resource type="Script" path="res://Levels/PRBasePanel.gd" id="7_n7jjq"]
+[ext_resource type="Script" path="res://UI_Panel.gd" id="8_5agg2"]
+[ext_resource type="Script" path="res://Levels/ReviewPanel.gd" id="9_o6xnj"]
+[ext_resource type="Script" path="res://Levels/BribePanel.gd" id="10_3xbmy"]
+[ext_resource type="Texture2D" uid="uid://rhuu4r5uukkt" path="res://Assets/UI/Icons/Icon_Small_Blank_Dollar.png" id="12_h5h18"]
+
+[sub_resource type="FontVariation" id="FontVariation_suhvf"]
+base_font = ExtResource("2_c6ybi")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvcv3"]
+bg_color = Color(0, 0.411765, 0.721569, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_2gknc")
+
+[node name="MouseBlocker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -13.0
+offset_right = 1164.0
+offset_bottom = 654.0
+mouse_filter = 2
+
+[node name="Money" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 52.0
+offset_right = 296.0
+offset_bottom = 107.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_c6ybi")
+theme_override_font_sizes/font_size = 54
+text = "aaaaa"
+
+[node name="Event" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 52.0
+offset_right = 99.0
+offset_bottom = 94.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 25
+text = "aaaaa"
+
+[node name="Year" type="Label" parent="."]
+offset_left = 1280.0
+offset_top = 52.0
+offset_right = 1568.0
+offset_bottom = 107.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_suhvf")
+theme_override_font_sizes/font_size = 54
+text = "aaaaaaaaa"
+horizontal_alignment = 2
+
+[node name="StudioPanelHolder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="BasePanel" type="Panel" parent="StudioPanelHolder" node_paths=PackedStringArray("develop_panel", "release_panel")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 34.0
+offset_right = 152.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("2_bjath")
+develop_panel = NodePath("../DevelopPanel")
+release_panel = NodePath("../ReleasePanel")
+
+[node name="HideButton" type="Button" parent="StudioPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="DevelopButton" type="Button" parent="StudioPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 81.0
+offset_right = 167.0
+offset_bottom = 112.0
+focus_mode = 0
+text = "Develop"
+
+[node name="ReleaseButton" type="Button" parent="StudioPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 121.0
+offset_right = 167.0
+offset_bottom = 152.0
+focus_mode = 0
+text = "Release"
+
+[node name="DevelopPanel" type="Panel" parent="StudioPanelHolder"]
+visible = false
+layout_mode = 0
+offset_left = 832.0
+offset_top = 166.0
+offset_right = 1088.0
+offset_bottom = 479.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("3_6grq2")
+
+[node name="HideButton" type="Button" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="Genre" type="Label" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 2
+offset_left = 11.0
+offset_top = 55.0
+offset_right = 80.0
+offset_bottom = 83.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Genre"
+horizontal_alignment = 1
+
+[node name="GenreOption" type="LineEdit" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 55.0
+offset_right = 226.0
+offset_bottom = 86.0
+focus_mode = 0
+alignment = 1
+editable = false
+selecting_enabled = false
+script = ExtResource("4_kj7c1")
+options = Array[String](["Shooter", "Educational", "Racing", "Soccer"])
+
+[node name="Left" type="Button" parent="StudioPanelHolder/DevelopPanel/GenreOption"]
+layout_mode = 0
+offset_left = -29.0
+offset_right = 1.0
+offset_bottom = 31.0
+focus_mode = 0
+text = "<"
+
+[node name="Right" type="Button" parent="StudioPanelHolder/DevelopPanel/GenreOption"]
+layout_mode = 0
+offset_left = 111.0
+offset_right = 141.0
+offset_bottom = 31.0
+focus_mode = 0
+text = ">"
+
+[node name="Quality" type="Label" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 2
+offset_left = 11.0
+offset_top = 105.0
+offset_right = 81.0
+offset_bottom = 133.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Quality"
+horizontal_alignment = 1
+
+[node name="QualityOption" type="LineEdit" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 104.0
+offset_right = 226.0
+offset_bottom = 135.0
+focus_mode = 0
+alignment = 1
+editable = false
+selecting_enabled = false
+script = ExtResource("4_kj7c1")
+options = Array[String](["Low", "Medium", "High"])
+
+[node name="Left" type="Button" parent="StudioPanelHolder/DevelopPanel/QualityOption"]
+layout_mode = 0
+offset_left = -29.0
+offset_right = 1.0
+offset_bottom = 31.0
+focus_mode = 0
+text = "<"
+
+[node name="Right" type="Button" parent="StudioPanelHolder/DevelopPanel/QualityOption"]
+layout_mode = 0
+offset_left = 111.0
+offset_right = 141.0
+offset_bottom = 31.0
+focus_mode = 0
+text = ">"
+
+[node name="Time" type="Label" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 2
+offset_left = 33.0
+offset_top = 168.0
+offset_right = 92.0
+offset_bottom = 196.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Time"
+
+[node name="TimeInfo" type="LineEdit" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 168.0
+offset_right = 240.0
+offset_bottom = 199.0
+alignment = 1
+editable = false
+
+[node name="Cost" type="Label" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 2
+offset_left = 34.0
+offset_top = 205.0
+offset_right = 93.0
+offset_bottom = 233.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Cost"
+
+[node name="CostInfo" type="LineEdit" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 205.0
+offset_right = 240.0
+offset_bottom = 236.0
+alignment = 1
+editable = false
+
+[node name="DevelopButton" type="Button" parent="StudioPanelHolder/DevelopPanel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 272.0
+offset_right = 162.0
+offset_bottom = 303.0
+focus_mode = 0
+text = "Develop"
+
+[node name="ReleasePanel" type="Panel" parent="StudioPanelHolder"]
+layout_mode = 1
+offset_left = 856.0
+offset_top = 362.0
+offset_right = 1112.0
+offset_bottom = 675.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("5_n1fmq")
+
+[node name="HideButton" type="Button" parent="StudioPanelHolder/ReleasePanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="Game" type="Label" parent="StudioPanelHolder/ReleasePanel"]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 55.0
+offset_right = 77.0
+offset_bottom = 83.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Game"
+
+[node name="GameOption" parent="StudioPanelHolder/ReleasePanel" instance=ExtResource("6_u27jc")]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 55.0
+offset_right = 223.0
+offset_bottom = 86.0
+options = Array[String](["..."])
+
+[node name="Price" type="Label" parent="StudioPanelHolder/ReleasePanel"]
+layout_mode = 2
+offset_left = 33.0
+offset_top = 168.0
+offset_right = 92.0
+offset_bottom = 196.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Price"
+
+[node name="PriceInfo" parent="StudioPanelHolder/ReleasePanel" instance=ExtResource("6_u27jc")]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 166.0
+offset_right = 224.0
+offset_bottom = 197.0
+
+[node name="ReleaseButton" type="Button" parent="StudioPanelHolder/ReleasePanel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 272.0
+offset_right = 162.0
+offset_bottom = 303.0
+focus_mode = 0
+text = "Release"
+
+[node name="PRPanelHolder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -316.0
+offset_right = 776.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BasePanel" type="Panel" parent="PRPanelHolder" node_paths=PackedStringArray("trends_panel", "review_panel", "bribe_panel")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -135.0
+offset_right = -32.0
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("7_n7jjq")
+trends_panel = NodePath("../TrendPanel")
+review_panel = NodePath("../ReviewPanel")
+bribe_panel = NodePath("../BribePanel")
+
+[node name="HideButton" type="Button" parent="PRPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="TrendsButton" type="Button" parent="PRPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 81.0
+offset_right = 183.0
+offset_bottom = 112.0
+focus_mode = 0
+text = "View Trends"
+
+[node name="ReviewRequestButton" type="Button" parent="PRPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 121.0
+offset_right = 205.0
+offset_bottom = 152.0
+focus_mode = 0
+text = "Request a Review"
+
+[node name="BribeButton" type="Button" parent="PRPanelHolder/BasePanel"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 160.0
+offset_right = 168.0
+offset_bottom = 191.0
+focus_mode = 0
+text = "Bribe"
+
+[node name="TrendPanel" type="Panel" parent="PRPanelHolder"]
+visible = false
+layout_mode = 0
+offset_left = 309.0
+offset_top = 134.0
+offset_right = 565.0
+offset_bottom = 447.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("8_5agg2")
+
+[node name="HideButton" type="Button" parent="PRPanelHolder/TrendPanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="Label" type="Label" parent="PRPanelHolder/TrendPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 245.0
+offset_bottom = 230.0
+text = "..."
+autowrap_mode = 2
+
+[node name="ReviewPanel" type="Panel" parent="PRPanelHolder"]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 134.0
+offset_right = 552.0
+offset_bottom = 447.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("9_o6xnj")
+
+[node name="Game" type="Label" parent="PRPanelHolder/ReviewPanel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 32.0
+offset_right = 77.0
+offset_bottom = 60.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 20
+text = "Game"
+
+[node name="GameOption" parent="PRPanelHolder/ReviewPanel" instance=ExtResource("6_u27jc")]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 32.0
+offset_right = 223.0
+offset_bottom = 63.0
+options = Array[String](["..."])
+
+[node name="HideButton" type="Button" parent="PRPanelHolder/ReviewPanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="Prompt" type="Label" parent="PRPanelHolder/ReviewPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 77.0
+offset_right = 245.0
+offset_bottom = 148.0
+text = "Are you sure want to get a review? It can be good or bad."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ReviewResult" type="Label" parent="PRPanelHolder/ReviewPanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 140.0
+offset_right = 246.0
+offset_bottom = 211.0
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="PRPanelHolder/ReviewPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 251.0
+offset_right = 183.0
+offset_bottom = 282.0
+focus_mode = 0
+text = "Confirm"
+
+[node name="BribePanel" type="Panel" parent="PRPanelHolder"]
+visible = false
+layout_mode = 0
+offset_left = 304.0
+offset_top = 134.0
+offset_right = 560.0
+offset_bottom = 447.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvcv3")
+script = ExtResource("10_3xbmy")
+
+[node name="HideButton" type="Button" parent="PRPanelHolder/BribePanel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -16.0
+offset_right = 269.0
+offset_bottom = 22.0
+focus_mode = 0
+text = "X"
+
+[node name="Prompt" type="Label" parent="PRPanelHolder/BribePanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 33.0
+offset_right = 245.0
+offset_bottom = 104.0
+text = "Bribing is not a good strategy, you'll receive a 10000$ fee, if it doesn't work out!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BribeResult" type="Label" parent="PRPanelHolder/BribePanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 140.0
+offset_right = 246.0
+offset_bottom = 211.0
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="PRPanelHolder/BribePanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 251.0
+offset_right = 183.0
+offset_bottom = 282.0
+focus_mode = 0
+text = "Confirm"
+
+[node name="IconSmallBlankDollar" type="Sprite2D" parent="."]
+position = Vector2(64, 80)
+scale = Vector2(0.758065, 0.845679)
+texture = ExtResource("12_h5h18")
+
+[connection signal="button_down" from="StudioPanelHolder/BasePanel/HideButton" to="StudioPanelHolder/BasePanel" method="_on_hide_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/BasePanel/DevelopButton" to="StudioPanelHolder/BasePanel" method="_on_develop_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/BasePanel/ReleaseButton" to="StudioPanelHolder/BasePanel" method="_on_release_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/HideButton" to="StudioPanelHolder/DevelopPanel" method="_on_hide_button_down"]
+[connection signal="item_selected" from="StudioPanelHolder/DevelopPanel/GenreOption" to="StudioPanelHolder/DevelopPanel" method="_on_genre_option_item_selected"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/GenreOption/Left" to="StudioPanelHolder/DevelopPanel/GenreOption" method="_on_left_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/GenreOption/Right" to="StudioPanelHolder/DevelopPanel/GenreOption" method="_on_right_button_down"]
+[connection signal="item_selected" from="StudioPanelHolder/DevelopPanel/QualityOption" to="StudioPanelHolder/DevelopPanel" method="_on_quality_option_item_selected"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/QualityOption/Left" to="StudioPanelHolder/DevelopPanel/QualityOption" method="_on_left_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/QualityOption/Right" to="StudioPanelHolder/DevelopPanel/QualityOption" method="_on_right_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/DevelopPanel/DevelopButton" to="StudioPanelHolder/DevelopPanel" method="_on_develop_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/ReleasePanel/HideButton" to="StudioPanelHolder/ReleasePanel" method="_on_hide_button_down"]
+[connection signal="button_down" from="StudioPanelHolder/ReleasePanel/ReleaseButton" to="StudioPanelHolder/ReleasePanel" method="_on_release_button_down"]
+[connection signal="button_down" from="PRPanelHolder/BasePanel/TrendsButton" to="PRPanelHolder/BasePanel" method="_on_trends_button_down"]
+[connection signal="button_down" from="PRPanelHolder/BasePanel/ReviewRequestButton" to="PRPanelHolder/BasePanel" method="_on_review_request_button_down"]
+[connection signal="button_down" from="PRPanelHolder/BasePanel/BribeButton" to="PRPanelHolder/BasePanel" method="_on_bribe_button_down"]
+[connection signal="button_down" from="PRPanelHolder/ReviewPanel/ConfirmButton" to="PRPanelHolder/ReviewPanel" method="_on_confirm_button_down"]
+[connection signal="button_down" from="PRPanelHolder/BribePanel/ConfirmButton" to="PRPanelHolder/BribePanel" method="_on_confirm_button_down"]

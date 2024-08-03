@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0pbqwis7btrp"
+path="res://.godot/imported/trafficlight_A.obj-7323241d35c3aa79ac1e9888682e12fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trafficlight_A.obj-7323241d35c3aa79ac1e9888682e12fa.mesh"]
+
+source_file="res://KayKit_City_Builder_Bits_1.0_FREE/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/trafficlight_A.obj"
+dest_files=["res://.godot/imported/trafficlight_A.obj-7323241d35c3aa79ac1e9888682e12fa.mesh", "res://.godot/imported/trafficlight_A.obj-7323241d35c3aa79ac1e9888682e12fa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

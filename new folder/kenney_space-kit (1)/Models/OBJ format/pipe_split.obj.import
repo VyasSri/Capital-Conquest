@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8p3ffhn0cjo7"
+path="res://.godot/imported/pipe_split.obj-8af946b8e4772da3eb0a2db0b8d7a9f9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pipe_split.obj-8af946b8e4772da3eb0a2db0b8d7a9f9.mesh"]
+
+source_file="res://new folder/kenney_space-kit (1)/Models/OBJ format/pipe_split.obj"
+dest_files=["res://.godot/imported/pipe_split.obj-8af946b8e4772da3eb0a2db0b8d7a9f9.mesh", "res://.godot/imported/pipe_split.obj-8af946b8e4772da3eb0a2db0b8d7a9f9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
